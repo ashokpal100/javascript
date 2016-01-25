@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>Calculator Example</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" type="text/css" href="calculator.css">
+</head>
+<SCRIPT src="Calculator.js"></SCRIPT>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 col-md-4 col-xs-1"></div>
+			<div class="col-lg-4 col-md-4 col-xs-10" style="font-size:35px;"></div>
+			<div class="col-lg-4 col-md-4 col-xs-2"></div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-4 col-md-4 col-xs-1"></div>
+			<div class="col-lg-3 col-md-4 col-xs-10 stl" style="background-color:black;"><br>
+				<center><input type="text" id="txtdisp"size="24" height="40%"style="text-align:right"/><center><br>
+
+                <p><input type="button" class="button gray" value=" " onclick='c("Created....................")'>
+                <input type="button" class="button gray" value=" " onclick='c("...............by............")'>
+                <input type="button" class="button gray" value=" " onclick='c(".....................Ashok")'>
+                    <input type="button" id="btnclear" value="C"  class="button gray" onClick="bclear();"></p>
+
+				<p><input type="button" id="btn7"  class="button black"value="7"onClick="btncon(7);">
+				<input type="button" id="btn8" class="button black"value="8"onClick="btncon(8);">
+				<input type="button" id="btn9" class="button black"value="9"onClick="btncon(9);">
+				<input type="button" id="btnpls" class="button pink"value="+"onClick="operation('+');"></p>
+
+				<p><input type="button" id="btn4" class="button black"value="4"onClick="btncon(4);">
+					<input type="button" id="btn5" class="button black"value="5"onClick="btncon(5);">
+						<input type="button" id="btn6" class="button black"value="6"onClick="btncon(6);">
+							<input type="button" id="btnmin" class="button pink"value="-"onClick="operation('-');"></p>
+
+                <p><input type="button" id="btn3" class="button black"value="3"onClick="btncon(3);">
+                <input type="button" id="btn2" class="button black"value="2"onClick="btncon(2);">
+                <input type="button" id="btn1" class="button black"value="1"onClick="btncon(1);">
+                <input type="button" id="btnmul" class="button pink"value="*"onClick="operation('*');"></p>
+
+                 <input type="button" id="btnpin" class="button black"value="."onClick="btncon('.');">
+                <input type="button" id="btn0" class="button black"value="0"onClick="btncon(0);">
+                <input type="button" id="btneql" class="button black"value="="onClick="operation('=');">
+                <input type="button" id="btndiv" class="button pink"value="/"onClick="operation('/');"><br><br>
+
+
+			</div>
+			<div class="col-lg-4 col-md-4 col-xs-2"></div>
+		</div>
+	</div>
+    
+</body>
