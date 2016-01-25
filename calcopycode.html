@@ -1,0 +1,220 @@
+<html>
+<head>
+<title>Basic Calculator</title>
+<script language="JavaScipt" type="text/JavaScript">
+var adddigit=false;
+var oldval=0;
+var op="=";
+
+function btnconcat(c)
+{
+    if(adddigit)
+    {
+    document.getElementById("txtdisplay").value+=c;
+    }
+    else
+    {
+    document.getElementById("txtdisplay").value=c;
+    adddigit=true;
+    }
+}
+
+function operation(newop)
+{
+    var newarg=eval(document.getElementById("txtdisplay").value)
+    if(op=="+")
+    {
+    oldval=oldval+newarg;
+    }
+    else if(op=="-")
+    {
+    oldval=oldval-newarg;
+    }
+    else if(op=="*")
+    {
+    oldval=oldval*newarg;
+    }
+    else if(op=="/")
+    {
+    oldval=oldval/newarg;
+    }
+    else if(op=="=")
+    {
+    oldval=newarg;
+    }
+    else
+    {
+    oldval=newarg;
+    }
+    document.getElementById("txtdisplay").value=oldval;
+    adddigit=false;
+    op=newop;
+}
+
+function backspace()
+{
+
+    document.getElementById("txtdisplay").value=document.getElementById("txtdisplay").value.substring(0,document.getElementById("txtdisplay").value.length*1-1);
+}   
+
+function btnce()
+{
+    document.getElementById("txtdisplay").value="";
+}
+
+function btnc()
+{
+    document.getElementById("txtdisplay").value=0;
+    oldval=0;
+    adddigit=false;
+    op="=";
+}
+</script>
+</head>
+
+
+
+
+
+<body>
+<center>
+<table border=5 cellpading=5 cellspacing=5>
+
+<tr>
+<td colspan="4">
+    <input type="text" id="txtdisplay"size="25" style="text-align:right"></td>
+</tr>
+
+<tr>
+    <td>
+    <center>
+        <input type="button" id="btnc" value="C"onClick="btnc();">
+    </center>
+    </td>
+
+    <td>&nbsp;
+
+    </td>
+
+    <td>
+    <center>
+                    <input name="Button" type="button" id="btnc"onClick="btnce();" value="CE">
+    </center>
+    </td>
+
+    <td>
+    <center>
+    <input type="button" id="btnc" value="<="onClick="backspace();">
+    </center>
+    </td>
+</tr>
+
+<tr>
+    <td>
+    <center>
+    <input type="button" id="btn7" value="7"onClick="btnconcat(7);">
+    </center>
+    </td>
+
+    <td>
+    <center>
+    <input type="button" id="btn8" value="8"onClick="btnconcat(8);">
+    </center>
+    </td>
+
+    <td>
+    <center>
+    <input type="button" id="btn9" value="9"onClick="btnconcat(9);">
+    </center>
+    </td>
+
+    <td>    
+    <center>
+    <input type="button" id="btnpls" value="+"onClick="operation('+');">
+    </center>
+    </td>
+</tr>
+
+<tr>
+    <td>
+    <center>
+    <input type="button" id="btn4" value="4"onClick="btnconcat(4);">
+    </center>
+    </td>
+
+    <td>
+    <center>
+    <input type="button" id="btn5" value="5"
+    onClick="btnconcat(5);">
+    </center>
+    </td>
+
+    <td>
+    <center>
+    <input type="button" id="btn6" value="6"onClick="btnconcat(6);">
+    </center>
+    </td>
+
+    <td>
+    <center>
+    <input type="button" id="btnmin" value="-"onClick="operation('-');">
+    </center>
+    </td>
+    </tr>
+
+<tr>
+    <td>
+    <center>
+    <input type="button" id="btn1" value="1"onClick="btnconcat(1);">
+    </center>
+    </td>
+
+    <td>
+    <center>
+    <input type="button" id="btn2" value="2"onClick="btnconcat(2);">
+    </center>
+    </td>
+
+    <td>
+    <center>
+    <input type="button" id="btn3" value="3"onClick="btnconcat(3);">
+    </center>
+    </td>
+
+    <td>    
+    <center>
+    <input type="button" id="btnmul" value="*"onClick="operation('*');">
+    </center>
+    </td>
+    </tr>
+
+<tr>
+    <td>
+    <center>    
+    <input type="button" value="."onClick="btnconcat('.');">
+    </center>
+    </td>
+
+    <td>    
+    <center>
+    <input type="button" value="0"onClick="btnconcat(0);">
+    </center>
+    </td>
+
+    <td>
+    <center>
+    <input type="button" value="="onClick="operation(value)">
+    </center>
+    </td>
+
+    <td>
+    <center>
+    <input type="button" value="/"onClick="operation('/');">
+    </center>
+    </td>
+</tr>
+
+</table>
+</center>
+</body>
+</html> 
