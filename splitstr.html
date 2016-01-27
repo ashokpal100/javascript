@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click "Try it" to display the first array element, after a string split.</p>
+
+
+input some text:<input type="text" id="tx"></input>
+
+<button onclick="myFunction()">Try it</button>
+<p id="demo"></p>
+<p id="demo1"></p>
+
+<script>
+function myFunction()
+ {
+ 	var tet=document.getElementById("tx").value;
+ 	document.getElementById("demo1").innerHTML=tet;
+    var str = "a,b,c,d,e,f";
+    var arr = str.split(",");
+    var i;
+    var pr="";
+    for(i=0;i<arr.length;i++)
+    {
+    	pr=pr+arr[i]+"|";
+    }
+    document.getElementById("demo").innerHTML = pr;
+}
+</script>
+
+</body>
+</html>
+
+<html>
+<body>
+    <input type="text" id="userInput"=> give me input</input>
+<button onclick="test()">Submit</button>
+
+<!-- add this line for function to write into -->
+<p id="demo"></p>   
+
+<script type="text/javascript">
+function test(){
+    var userInput = document.getElementById("userInput").value;
+    document.getElementById("demo").innerHTML = userInput;
+}
+</script>
+</body>
+</html>
